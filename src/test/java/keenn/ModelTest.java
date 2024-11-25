@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 public class ModelTest {
     @Test public void testSomeModelMethod() {
         Model model = new Model();
-        assertTrue("model should not be null", model!=null);
+        assertTrue("model should not be null", model != null);
     }
 
     @Test public void testModelRun(){
@@ -23,10 +23,11 @@ public class ModelTest {
 	    model.addLayer(hidden1);
 	    model.addLayer(hidden2);
         model.addLayer(output);
-        //or model.addLayers(input, hidden1, hidden2, output); but needs to be tested
+        //or model.addLayers(input, hidden1, hidden2, output); 
 	    model.randomize();
 	    inputs.randomize(0.0f, 1.0f);
 	    model.setInput(inputs);
 	    Matrix result = model.run();
+		assertTrue("result should not be null", result != null);
     }
 }

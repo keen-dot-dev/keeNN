@@ -76,7 +76,7 @@ public class Model {
      * @param layer ILayer object
      * @param position
      */
-    public void setLayer(ILayer layer, int position){
+    public void insertLayerInto(ILayer layer, int position){
         if(this.layers.size() > position){
             this.layers.remove(position);
             this.layers.add(position, layer);
